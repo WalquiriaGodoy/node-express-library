@@ -23,7 +23,6 @@ class LivroController {
 
   static async cadastrarLivro(req, res) {
     const novoLivro = req.body;
-    console.log({ novoLivro });
     try {
       const autorEncontrado = await autor.findById(novoLivro.autor);
       const livroCompleto = {
